@@ -8,15 +8,15 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-200: oklch(92.4% 0.12 95.746);
+    --color-amber-400: oklch(82.8% 0.189 84.429);
+    --color-amber-500: oklch(76.9% 0.188 70.08);
+    --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
-    --text-4xl: 2.25rem;
-    --text-4xl--line-height: calc(2.5 / 2.25);
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
     --text-8xl: 6rem;
@@ -179,32 +179,8 @@
   .m-1 {
     margin: var(--spacing);
   }
-  .m-4 {
-    margin: calc(var(--spacing) * 4);
-  }
-  .m-5 {
-    margin: calc(var(--spacing) * 5);
-  }
-  .m-9 {
-    margin: calc(var(--spacing) * 9);
-  }
   .flex {
     display: flex;
-  }
-  .h-90 {
-    height: calc(var(--spacing) * 90);
-  }
-  .h-96 {
-    height: calc(var(--spacing) * 96);
-  }
-  .h-720 {
-    height: calc(var(--spacing) * 720);
-  }
-  .h-full {
-    height: 100%;
-  }
-  .min-h-screen {
-    min-height: 100vh;
   }
   .w-full {
     width: 100%;
@@ -215,35 +191,32 @@
   .cursor-pointer {
     cursor: pointer;
   }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
+  }
+  .bg-amber-200 {
+    background-color: var(--color-amber-200);
+  }
+  .bg-amber-400 {
+    background-color: var(--color-amber-400);
+  }
+  .bg-amber-500 {
+    background-color: var(--color-amber-500);
+  }
+  .bg-blue-400 {
+    background-color: var(--color-blue-400);
   }
   .bg-\[url\(\'\.\/images\/amahlecele\.png\'\)\] {
     background-image: url('./images/amahlecele.png');
   }
-  .bg-\[url\(\'\/images\/amahlecele\.png\'\)\] {
-    background-image: url('/images/amahlecele.png');
-  }
   .bg-cover {
     background-size: cover;
   }
-  .bg-fixed {
-    background-attachment: fixed;
-  }
-  .bg-center {
-    background-position: center;
-  }
-  .bg-no-repeat {
-    background-repeat: no-repeat;
-  }
   .p-2 {
     padding: calc(var(--spacing) * 2);
-  }
-  .p-9 {
-    padding: calc(var(--spacing) * 9);
-  }
-  .p-44 {
-    padding: calc(var(--spacing) * 44);
   }
   .p-88 {
     padding: calc(var(--spacing) * 88);
@@ -257,14 +230,6 @@
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .text-4xl {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
   .text-6xl {
     font-size: var(--text-6xl);
