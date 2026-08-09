@@ -182,11 +182,14 @@
   .flex {
     display: flex;
   }
+  .h-60 {
+    height: calc(var(--spacing) * 60);
+  }
+  .h-90 {
+    height: calc(var(--spacing) * 90);
+  }
   .w-full {
     width: 100%;
-  }
-  .w-screen {
-    width: 100vw;
   }
   .cursor-pointer {
     cursor: pointer;
@@ -197,17 +200,8 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
-  .bg-amber-200 {
-    background-color: var(--color-amber-200);
-  }
   .bg-amber-400 {
     background-color: var(--color-amber-400);
-  }
-  .bg-amber-500 {
-    background-color: var(--color-amber-500);
-  }
-  .bg-blue-400 {
-    background-color: var(--color-blue-400);
   }
   .bg-\[url\(\'\.\/images\/amahlecele\.png\'\)\] {
     background-image: url('./images/amahlecele.png');
