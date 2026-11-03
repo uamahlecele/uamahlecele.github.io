@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of uAmahle Cele, a Software Engineering student at WeThinkCode_.">
+    <link rel="stylesheet" href="./src/output.css">
+    <title>uAmahle Cele | Portfolio</title>
+    <style>
+        body {
+            background-color: #F5F5DC;
+
+            background-size: cover;
+
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #track {
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+        }
+
+        #track::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #track {
+                scroll-behavior: auto;
+            }
+        }
+
+        nav a[aria-current="true"] {
+            color: #d97706;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 6px;
+        }
+    </style>
+</head>
+
+<body class="h-dvh flex flex-col overflow-hidden text-neutral-900 font-poppins antialiased">
+
+    <header class="border-b border-neutral-200">
+        <nav class="mx-auto flex max-w-3xl items-center justify-between px-6 py-5" aria-label="Main">
+            <a href="#top" class="font-bold">uAmahle Cele</a>
+            <ul class="flex gap-4 sm:gap-6 text-sm font-medium">
+                <li><a class="hover:text-amber-600" href="#about">About</a></li>
+                <li><a class="hover:text-amber-600" href="#projects">Projects</a></li>
+                <li><a class="hover:text-amber-600" href="#certs">Certs</a></li>
+                <li><a class="hover:text-amber-600" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="track" class="flex flex-1 min-h-0 overflow-x-auto overflow-y-hidden snap-x snap-mandatory">
+
+        <section id="top" class="relative min-w-full snap-start overflow-hidden bg-neutral-800">
+            <img src="src/images/amahlecele.png" alt="Portrait of uAmahle Cele"
+                class="absolute inset-0 h-full w-full object-cover" style="object-position: center 20%;">
+            <!-- Dark fade so the white text stays readable on any photo -->
+            <div class="absolute inset-0"
+                style="background: linear-gradient(to top, rgba(0,0,0,.75) 0%, rgba(0,0,0,.25) 45%, rgba(0,0,0,0) 70%);">
+            </div>
+            <div class="relative flex h-full flex-col justify-end px-6 pb-12 sm:px-12 sm:pb-16">
+                <h1 class="font-instrument text-5xl sm:text-7xl leading-none text-white">uAmahle Cele</h1>
+                <p class="mt-4 max-w-xl text-xl sm:text-2xl text-white">Software Engineering student @ WeThinkCode_.</p>
+                <div class="mt-6 h-1 w-16 bg-amber-400"></div>
+            </div>
+        </section>
+
+        <section id="about" class="min-w-full snap-start overflow-y-auto">
+            <div class="mx-auto flex min-h-full max-w-3xl flex-col justify-center px-6 py-12">
+                <h2 class="text-3xl font-bold">About me</h2>
+                <div class="mt-4 space-y-4 leading-relaxed text-black">
+                    <p>Sanibonani, I'm Amahle Cele. I'm studying for a Diploma in Software Engineering at WeThinkCode_,
+                        and I hold a Bachelor of Film and Television from the University of the Witwatersrand.</p>
+                    <p>I first met programming through Scratch in Grade 10. I came back to it at Wits when I needed a
+                        website for my photography business. Since then I've become fascinated by using software to
+                        control hardware, which led me to IoT engineering. I'm also interested in data analysis and
+                        data engineering. In my free time I read about history and write.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="min-w-full snap-start overflow-y-auto">
+            <div class="mx-auto flex min-h-full max-w-3xl flex-col justify-center px-6 py-12">
+                <h2 class="text-3xl font-bold">Projects</h2>
+                <ul class="mt-4 divide-y divide-neutral-200 border-y border-neutral-200">
+
+                    <li class="py-4">
+                        <h3 class="font-semibold">Velaphi</h3>
+                        <p class="text-black">Full-stack web app for learning about your family clan names and
+                            izithakazelo.</p>
+                    </li>
+                    <li class="py-4">
+                        <h3 class="font-semibold">iBafana Bafana & the Fifa World Cup</h3>
+                        <p class="text-black"> A webite tracking South Africa's national football team's performance
+                            and stats at the FIFA World Cup, from their debut in 1998 onwards.</p>
+                        <br>
+
+                        <a class="underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-600"
+                            href="http://100.27.203.198:8501/" target="_blank">View Website Here </a>
+
+                    </li>
+
+                    <li class="py-4">
+                        <h3 class="font-semibold">CIBYC</h3>
+                        <p class="text-black">Full-stack web app for WeThinkCode_'s content club. It lets members
+                            view
+                            images remotely and store them locally as the camera takes them.</p>
+                    </li>
+
+                    <li class="py-4">
+                        <h3 class="font-semibold">Kaipom</h3>
+                        <p class="text-black">Command-line tool that tracks my study sessions using the Pomodoro
+                            technique.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="certs" class="min-w-full snap-start overflow-y-auto">
+            <div class="mx-auto flex min-h-full max-w-3xl flex-col justify-center px-6 py-12">
+                <h2 class="text-3xl font-bold">Certifications</h2>
+                <ul class="mt-4 list-disc pl-5 text-black">
+                    <li>CS50's Introduction to Programming with Python</li>
+                    <!-- <li>Microsoft Certified: Azure Fundamentals</li> -->
+                    <li>Introduction to IoT — Cisco Networking Academy </li>
+                    <!-- <li>Microsoft Certified: Azure Data Fundamentals (DP-900)</li> -->
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="min-w-full snap-start overflow-y-auto">
+            <div class="mx-auto flex min-h-full max-w-3xl flex-col justify-center px-6 py-12">
+                <h2 class="text-3xl font-bold">Contact</h2>
+                <ul class="mt-4 flex flex-wrap gap-x-8 gap-y-2 font-medium">
+                    <li><a class="underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-600"
+                            href="mailto:uamahlecele@gmail.com">Email</a></li>
+                    <li><a class="underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-600"
+                            href="https://www.linkedin.com/in/uamahle-c-63938522b/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a class="underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-600"
+                            href="https://github.com/uamahlecele" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </li>
+                </ul>
+                <p class="mt-12 text-sm text-black">&copy; 2026 uAmahle Cele. All rights reserved.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const track = document.getElementById('track');
+        const panels = [...track.querySelectorAll('section')];
+        const links = [...document.querySelectorAll('nav a[href^="#"]')];
+        let index = 0, lockedUntil = 0;
+
+        // Highlight the nav link for the visible panel
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                if (!e.isIntersecting) return;
+                index = panels.indexOf(e.target);
+                links.forEach((a) => a.setAttribute('aria-current', String(a.hash === '#' + e.target.id)));
+            });
+        }, { root: track, threshold: 0.6 });
+        panels.forEach((p) => io.observe(p));
+
+        const goTo = (i) => {
+            index = Math.max(0, Math.min(panels.length - 1, i));
+            track.scrollTo({ left: panels[index].offsetLeft, behavior: 'smooth' });
+        };
+
+        // Mouse wheel / trackpad: vertical scroll moves one panel sideways
+        track.addEventListener('wheel', (e) => {
+            if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+            const s = e.target.closest('section');
+            if (s && s.scrollHeight > s.clientHeight) return; // let tall panels scroll normally
+            e.preventDefault();
+            const now = Date.now();
+            if (now < lockedUntil) {
+                // Still animating or trackpad momentum is still firing: keep waiting
+                lockedUntil = Math.max(lockedUntil, now + 200);
+                return;
+            }
+            if (Math.abs(e.deltaY) < 4) return; // ignore tiny movements
+            goTo(index + (e.deltaY > 0 ? 1 : -1));
+            lockedUntil = now + 800;
+        }, { passive: false });
+
+        // Arrow keys
+        addEventListener('keydown', (e) => {
+            if (e.target.closest('input, textarea')) return;
+            if (e.key === 'ArrowRight') goTo(index + 1);
+            if (e.key === 'ArrowLeft') goTo(index - 1);
+        });
+    </script>
+</body>
+
+</html>
