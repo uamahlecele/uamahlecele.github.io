@@ -1,9 +1,0 @@
-@import "tailwindcss";
-
-@theme {
-  --font-instrument: "InstrumentSerif-Regular", sans-serif;
-}
-
-@theme{
-  ---animate-color: "#F7B801"
-}
