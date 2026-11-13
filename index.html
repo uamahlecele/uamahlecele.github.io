@@ -45,6 +45,19 @@
             text-underline-offset: 6px;
         }
 
+        #projects a,
+        #contact a,
+        nav a {
+            transition: color 0.15s ease, text-decoration-color 0.15s ease;
+        }
+
+        #projects a:hover,
+        #contact a:hover,
+        nav a:hover {
+            color: #fbbf24 !important;
+            text-decoration-color: #f59e0b !important;
+        }
+
         .about-layout {
             display: flex;
             flex-direction: column;
@@ -67,6 +80,15 @@
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
             flex-shrink: 0;
             object-fit: cover;
+        }
+
+        .projects-subtitle {
+            margin-top: 0.75rem;
+            margin-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 42rem;
         }
     </style>
 </head>
@@ -123,38 +145,31 @@
         </section>
 
         <section id="projects" class="min-w-full snap-start overflow-y-auto">
-            <div class="mx-auto flex min-h-full max-w-3xl flex-col justify-center px-6 py-12">
+            <div class="mx-auto flex min-h-full max-w-3xl flex-col justify-center px-6 py-6 sm:py-8">
                 <h2 class="text-3xl font-bold">Projects</h2>
-                <p class="mt-2 text-white">I like building useful tools and solving problems that can make things a tad bit easier.</p>
-                <ul class="mt-4 divide-y divide-white/20 border-y border-white/20">
+                <p class="projects-subtitle">I like building useful tools and solving problems that can make things a tad bit easier.</p>
+                <ul class="divide-y divide-white/20 border-y border-white/20">
 
-                    <li class="py-4">
-                        <h3 class="font-semibold">Velaphi</h3>
-                        <p class="text-white">Velaphi is a Fullstack Web Application built for learning more about your
-                            family clan names and
-                            relevant history.</p>
-                        <br>
-
-                        <a class="underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-400"
+                    <li class="py-4 sm:py-5">
+                        <h3 class="font-semibold text-lg">Velaphi</h3>
+                        <p class="mt-1 text-white leading-relaxed">Velaphi is a Fullstack Web Application built for learning more about your
+                            family clan names and relevant history.</p>
+                        <a class="mt-2 inline-block underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-400"
                             href="https://velaphi-murex.vercel.app/" target="_blank" rel="noopener noreferrer">View
                             Website Here </a>
                     </li>
-                    <li class="py-4">
-                        <h3 class="font-semibold">iBafana Bafana & the Fifa World Cup</h3>
-                        <p class="text-white"> A webite tracking South Africa's national football team's performance
+                    <li class="py-4 sm:py-5">
+                        <h3 class="font-semibold text-lg">iBafana Bafana & the Fifa World Cup</h3>
+                        <p class="mt-1 text-white leading-relaxed">A website tracking South Africa's national football team's performance
                             and stats at the FIFA World Cup, from their debut in 1998 onwards.</p>
-                        <br>
-
-                        <a class="underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-400"
+                        <a class="mt-2 inline-block underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-400"
                             href="http://100.27.203.198:8501/" target="_blank">View Website Here </a>
-
                     </li>
 
-                    <li class="py-4">
-                        <h3 class="font-semibold">CIBYC</h3>
-                        <p class="text-white">Full-stack web app for WeThinkCode_'s content club. It lets members
-                            view
-                            images remotely and store them locally as the camera takes them.</p>
+                    <li class="py-4 sm:py-5">
+                        <h3 class="font-semibold text-lg">CIBYC</h3>
+                        <p class="mt-1 text-white leading-relaxed">Full-stack web app for WeThinkCode_'s content club. It lets members
+                            view images remotely and store them locally as the camera takes them.</p>
                     </li>
 
                 </ul>
