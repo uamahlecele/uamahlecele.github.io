@@ -5,14 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of uAmahle Cele, a Software Engineering student at WeThinkCode_.">
+    <link rel="preload" as="image" href="./src/images/Texturelabs_Paper_381XL.webp" type="image/webp"
+        fetchpriority="high">
     <link rel="stylesheet" href="./src/output.css">
     <title>uAmahle Cele | Portfolio</title>
     <style>
         body {
-            background-color: #F5F5DC;
-
+            background-color: #2f709a;
+            background-image: url('./src/images/Texturelabs_Paper_381XL.webp');
+            background-image: -webkit-image-set(url('./src/images/Texturelabs_Paper_381XL.webp') type('image/webp'),
+                    url('./src/images/Texturelabs_Paper_381XL.jpg') type('image/jpeg'));
+            background-image: image-set(url('./src/images/Texturelabs_Paper_381XL.webp') type('image/webp'),
+                    url('./src/images/Texturelabs_Paper_381XL.jpg') type('image/jpeg'));
             background-size: cover;
-
             background-position: center;
             background-repeat: no-repeat;
         }
@@ -20,6 +25,7 @@
         #track {
             scroll-behavior: smooth;
             scrollbar-width: none;
+            will-change: scroll-position;
         }
 
         #track::-webkit-scrollbar {
@@ -38,19 +44,43 @@
             text-decoration-thickness: 2px;
             text-underline-offset: 6px;
         }
+
+        .about-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .about-layout {
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 2rem;
+            }
+        }
+
+        .about-img {
+            width: 240px;
+            max-width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
+            flex-shrink: 0;
+            object-fit: cover;
+        }
     </style>
 </head>
 
-<body class="h-dvh flex flex-col overflow-hidden text-neutral-900 font-poppins antialiased">
+<body class="h-dvh flex flex-col overflow-hidden text-white font-poppins antialiased">
 
-    <header class="border-b border-neutral-200">
+    <header class="border-b border-white/20">
         <nav class="mx-auto flex max-w-3xl items-center justify-between px-6 py-5" aria-label="Main">
             <a href="#top" class="font-bold">uAmahle Cele</a>
             <ul class="flex gap-4 sm:gap-6 text-sm font-medium">
-                <li><a class="hover:text-amber-600" href="#about">About</a></li>
-                <li><a class="hover:text-amber-600" href="#projects">Projects</a></li>
-                <li><a class="hover:text-amber-600" href="#certs">Certs</a></li>
-                <li><a class="hover:text-amber-600" href="#contact">Contact</a></li>
+                <li><a class="hover:text-amber-400" href="#about">About</a></li>
+                <li><a class="hover:text-amber-400" href="#projects">Projects</a></li>
+                <li><a class="hover:text-amber-400" href="#certs">Certs</a></li>
+                <li><a class="hover:text-amber-400" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -74,16 +104,27 @@
         <section id="about" class="min-w-full snap-start overflow-y-auto">
             <div class="mx-auto flex min-h-full max-w-3xl flex-col justify-center px-6 py-12">
                 <h2 class="text-3xl font-bold">About me</h2>
-                <div class="mt-4 space-y-4 leading-relaxed text-black">
-                    <p>Sanibonani, my name is Amahle Cele, currently studying a Diploma in Software Engineering at
-                        WeThinkCode_.
+                <div class="about-layout">
+                    <img src="src/images/Google_Cloud_Summit.jpeg" alt="uAmahle Cele at Google Cloud Summit"
+                        class="about-img">
+                    <div class="space-y-4 leading-relaxed text-white">
+                        <p>San’bonani, and welcome to my portfolio!</p>
+                        <p>I’m Amahle Cele, a final-year student at WeThinkCode_ specialising in Data Engineering.</p>
+                        <p>Before software, I studied Film and Television at the University of the Witwatersrand, and it
+                            still shapes how I work. Film taught me to think about the end user first, to structure
+                            complex
+                            information so it’s easy to understand, and to collaborate with people from very different
+                            disciplines toward one common goal. I bring that same mindset to software engineering.</p>
+                        <p>I like building useful tools, things that can make someone’s life a little easier. Recently,
+                            I built
+                            CIBYC (Can I Borrow Your Converter), a web app for my school’s Content Club that
+                            automatically saves photos from a Canon camera to a laptop over local WiFi the moment
+                            they’re
+                            taken. It removes the manual transfer step our photographer had to do before editing</p>
 
-                        My initial background is in the humanities holding a Bachelor of Arts in Film and
-                        Television from the University of the Witwatersrand.</p>
-                    <!-- <p>I first met programming through Scratch in Grade 10. I came back to it at Wits when I needed a
-                        website for my photography business. Since then I've become fascinated by using software to
-                        control hardware, which led me to IoT engineering. I'm also interested in data analysis and
-                        data engineering. In my free time I read about history and write.</p> -->
+                        <p>Outside of code, you’ll usually find me writing or deep in research for my next project.</p>
+                        <p>I’m looking for graduate roles in software or data engineering.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -91,33 +132,33 @@
         <section id="projects" class="min-w-full snap-start overflow-y-auto">
             <div class="mx-auto flex min-h-full max-w-3xl flex-col justify-center px-6 py-12">
                 <h2 class="text-3xl font-bold">Projects</h2>
-                <ul class="mt-4 divide-y divide-neutral-200 border-y border-neutral-200">
+                <ul class="mt-4 divide-y divide-white/20 border-y border-white/20">
 
                     <li class="py-4">
                         <h3 class="font-semibold">Velaphi</h3>
-                        <p class="text-black">Velaphi is a Fullstack Web Application built for learning more about your
+                        <p class="text-white">Velaphi is a Fullstack Web Application built for learning more about your
                             family clan names and
                             relevant history.</p>
                         <br>
 
-                        <a class="underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-600"
+                        <a class="underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-400"
                             href="https://velaphi-murex.vercel.app/" target="_blank" rel="noopener noreferrer">View
                             Website Here </a>
                     </li>
                     <li class="py-4">
                         <h3 class="font-semibold">iBafana Bafana & the Fifa World Cup</h3>
-                        <p class="text-black"> A webite tracking South Africa's national football team's performance
+                        <p class="text-white"> A webite tracking South Africa's national football team's performance
                             and stats at the FIFA World Cup, from their debut in 1998 onwards.</p>
                         <br>
 
-                        <a class="underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-600"
+                        <a class="underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-400"
                             href="http://100.27.203.198:8501/" target="_blank">View Website Here </a>
 
                     </li>
 
                     <li class="py-4">
                         <h3 class="font-semibold">CIBYC</h3>
-                        <p class="text-black">Full-stack web app for WeThinkCode_'s content club. It lets members
+                        <p class="text-white">Full-stack web app for WeThinkCode_'s content club. It lets members
                             view
                             images remotely and store them locally as the camera takes them.</p>
                     </li>
@@ -129,7 +170,7 @@
         <section id="certs" class="min-w-full snap-start overflow-y-auto">
             <div class="mx-auto flex min-h-full max-w-3xl flex-col justify-center px-6 py-12">
                 <h2 class="text-3xl font-bold">Certifications</h2>
-                <ul class="mt-4 list-disc pl-5 text-black">
+                <ul class="mt-4 list-disc pl-5 text-white">
                     <li>CS50's Introduction to Programming with Python</li>
                     <li>Microsoft Certified: Azure Fundamentals</li>
                     <li>Introduction to IoT — Cisco Networking Academy </li>
@@ -142,16 +183,16 @@
             <div class="mx-auto flex min-h-full max-w-3xl flex-col justify-center px-6 py-12">
                 <h2 class="text-3xl font-bold">Contact</h2>
                 <ul class="mt-4 flex flex-wrap gap-x-8 gap-y-2 font-medium">
-                    <li><a class="underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-600"
+                    <li><a class="underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-400"
                             href="mailto:uamahlecele@gmail.com">Email</a></li>
-                    <li><a class="underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-600"
+                    <li><a class="underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-400"
                             href="https://www.linkedin.com/in/uamahle-c-63938522b/" target="_blank"
                             rel="noopener noreferrer">LinkedIn</a></li>
-                    <li><a class="underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-600"
+                    <li><a class="underline decoration-amber-400 decoration-2 underline-offset-4 hover:text-amber-400"
                             href="https://github.com/uamahlecele" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </li>
                 </ul>
-                <p class="mt-12 text-sm text-black">&copy; 2026 uAmahle Cele. All rights reserved.</p>
+                <p class="mt-12 text-sm text-white/80">&copy; 2026 uAmahle Cele. All rights reserved.</p>
             </div>
         </section>
     </main>
